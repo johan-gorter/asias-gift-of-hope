@@ -1,0 +1,7 @@
+# Robots.txt for LoremCo
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://loremco.com/sitemap.xml

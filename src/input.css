@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+/* Custom styles - Earthy/Sandy Color Palette */
+:root {
+  --primary: #b08968; /* Warm sand/camel */
+  --primary-dark: #7f5539; /* Rich earth brown */
+  --primary-light: #ddb892; /* Light sand */
+  --primary-lighter: #efe0d1; /* Very light sand */
+  --text: #3d2c1e; /* Dark earth */
+  --text-muted: #6b5344; /* Muted earth */
+  --text-light: #a89585; /* Light text for dark backgrounds */
+  --bg: #faf6f1; /* Warm cream */
+  --bg-alt: #f0e9e0; /* Alternate background */
+  --bg-dark: #44403c; /* Dark background (footer) */
+  --border: #d4c4b5; /* Border color */
+  --border-dark: #57534e; /* Dark border */
+
+  /* Button colors (gold) */
+  --btn: #d4a04a; /* Rich gold */
+  --btn-hover: #b8860b; /* Dark goldenrod */
+  --btn-text: #ffffff; /* Button text */
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+  background-color: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Theme color utilities */
+.bg-primary {
+  background-color: var(--primary);
+}
+.bg-primary-dark {
+  background-color: var(--primary-dark);
+}
+.bg-primary-light {
+  background-color: var(--primary-light);
+}
+.bg-primary-lighter {
+  background-color: var(--primary-lighter);
+}
+.bg-theme {
+  background-color: var(--bg);
+}
+.bg-theme-alt {
+  background-color: var(--bg-alt);
+}
+.bg-theme-dark {
+  background-color: var(--bg-dark);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+.text-primary-dark {
+  color: var(--primary-dark);
+}
+.text-primary-light {
+  color: var(--primary-light);
+}
+.text-theme {
+  color: var(--text);
+}
+.text-theme-muted {
+  color: var(--text-muted);
+}
+.text-theme-light {
+  color: var(--text-light);
+}
+
+.border-theme {
+  border-color: var(--border);
+}
+.border-theme-dark {
+  border-color: var(--border-dark);
+}
+
+.hover\:text-primary:hover {
+  color: var(--primary);
+}
+.hover\:text-primary-dark:hover {
+  color: var(--primary-dark);
+}
+.hover\:text-primary-light:hover {
+  color: var(--primary-light);
+}
+.hover\:bg-primary-dark:hover {
+  background-color: var(--primary-dark);
+}
+.hover\:bg-primary-lighter:hover {
+  background-color: var(--primary-lighter);
+}
+
+/* Hero gradient */
+.bg-hero-gradient {
+  background: linear-gradient(to right, var(--primary), var(--primary-dark));
+}
+
+/* Icon containers */
+.icon-container {
+  background-color: var(--primary-lighter);
+}
+.icon-container svg {
+  color: var(--primary);
+}
+
+/* Form styles */
+.form-input {
+  border-color: var(--border);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(176, 137, 104, 0.2);
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: var(--btn);
+  color: var(--btn-text);
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--btn-hover);
+}
+
+/* Generic button class for inline buttons */
+.btn {
+  background-color: var(--btn);
+  color: var(--btn-text);
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--btn-hover);
+}

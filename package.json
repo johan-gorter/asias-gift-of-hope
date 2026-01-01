@@ -1,0 +1,20 @@
+{
+  "name": "lorem-ipsum-website",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "css": "npx @tailwindcss/cli -i ./src/input.css -o ./_site/style.css",
+    "css:watch": "npx @tailwindcss/cli -i ./src/input.css -o ./_site/style.css --watch",
+    "dev": "npm run css && npx concurrently \"npm run css:watch\" \"npx @11ty/eleventy --serve\"",
+    "build": "npm run css -- --minify && npx @11ty/eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@tailwindcss/cli": "^4.0.0",
+    "concurrently": "^9.1.0",
+    "tailwindcss": "^4.0.0"
+  },
+  "dependencies": {
+    "@11ty/eleventy-img": "^6.0.4"
+  }
+}
