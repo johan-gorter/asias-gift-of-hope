@@ -32,10 +32,19 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Set path prefix
+        id: prefix
+        run: |
+          if [ -f "src/CNAME" ]; then
+            echo "path=/" >> $GITHUB_OUTPUT
+          else
+            echo "path=${{ vars.PATH_PREFIX || format('/{0}/', github.event.repository.name) }}" >> $GITHUB_OUTPUT
+          fi
+
       - name: Build site
         run: npm run build
         env:
-          PATH_PREFIX: /lorem-ipsum-website/
+          PATH_PREFIX: ${{ steps.prefix.outputs.path }}
 
       - name: Checkout gh-pages
         uses: actions/checkout@v4
@@ -73,10 +82,19 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Set path prefix
+        id: prefix
+        run: |
+          if [ -f "src/CNAME" ]; then
+            echo "path=/" >> $GITHUB_OUTPUT
+          else
+            echo "path=${{ vars.PATH_PREFIX || format('/{0}/', github.event.repository.name) }}" >> $GITHUB_OUTPUT
+          fi
+
       - name: Build site
         run: npm run build
         env:
-          PATH_PREFIX: /lorem-ipsum-website/pr-${{ github.event.number }}/
+          PATH_PREFIX: ${{ steps.prefix.outputs.path }}pr-${{ github.event.number }}/
 
       - name: Deploy PR preview
         uses: rajyan/preview-pages@v1
