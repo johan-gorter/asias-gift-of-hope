@@ -1,7 +1,7 @@
-# Robots.txt for LoremCo
+# Robots.txt for Asia's Gift of Hope
 
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://loremco.com/sitemap.xml
+Sitemap: https://asiasgiftofhope.nl/sitemap.xml

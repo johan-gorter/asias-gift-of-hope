@@ -223,13 +223,14 @@ De volgende afbeeldingen worden beschikbaar gemaakt in `/src/images/`:
 
 ---
 
-## Kleurenpalet (voorstel)
+## Kleurenpalet (Oosters geïnspireerd)
 
-- **Primair**: Warm oranje/goud (#E8A54B) - Hoop en warmte
-- **Secundair**: Diepblauw (#1E3A5F) - Betrouwbaarheid
-- **Accent**: Zacht groen (#6B9E78) - Groei en herstel
-- **Achtergrond**: Warm wit (#FDF8F3)
-- **Tekst**: Donkergrijs (#2D3748)
+- **Primair**: Smaragdgroen (#006D5B) - Traditioneel Midden-Oosters groen, symbool van hoop en islam
+- **Secundair**: Rijk goud (#D4A417) - Arabische kunst en warmte
+- **Accent**: Diep bordeaux (#8B2323) - Perzische patronen en hartstocht
+- **Achtergrond**: Warm zand/crème (#FBF7F0) - Woestijn geïnspireerd
+- **Tekst**: Donker leisteen (#1A1A2E) - Professioneel en leesbaar
+- **Licht accent**: Zacht goud (#F5E6C8) - Voor subtiele highlights
 
 ---
 

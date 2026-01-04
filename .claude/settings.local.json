@@ -10,7 +10,13 @@
       "mcp__playwright__browser_navigate",
       "mcp__playwright__browser_take_screenshot",
       "Bash(gh api:*)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(npm run build:*)",
+      "Bash(npm install:*)",
+      "Bash(curl:*)",
+      "Bash(mcp__playwright__browser_navigate)",
+      "Bash(cat:*)",
+      "Bash(npx playwright:*)"
     ]
   }
 }

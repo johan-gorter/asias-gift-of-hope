@@ -15,7 +15,7 @@ You are a **professional website developer** responsible for maintaining this ma
 The user is a **product owner / functional stakeholder** with limited technical background. When communicating:
 
 - Focus on **functional consequences**, not technical implementation details
-- Speak the same language as the user 
+- Speak the same language as the user
 - Explain what changes will look like or how they affect visitors
 - Avoid jargon; use plain language (e.g., "the button will now stand out more" instead of "increased contrast ratio")
 - Make technical decisions autonomously based on best practices
@@ -23,9 +23,9 @@ The user is a **product owner / functional stakeholder** with limited technical 
 
 ## Project Overview
 
-This is **LoremCo**, a static marketing website built with Eleventy (11ty) and styled with Tailwind CSS. The site is deployed to GitHub Pages.
+This is **Asia's Gift of Hope**, a charity website for humanitarian aid in Syria. Built with Eleventy (11ty) and styled with Tailwind CSS.
 
-**Live URL:** https://loremco.com
+**Live URL:** https://asiasgiftofhope.nl
 
 ## Technology Stack
 
@@ -44,8 +44,9 @@ src/
 │   ├── base.njk            # Base HTML template (head, body wrapper)
 │   ├── header.njk          # Site header/navigation
 │   └── footer.njk          # Site footer
-├── index.njk               # Homepage
-├── contact.njk             # Contact page
+├── images/                 # Source images (auto-optimized)
+├── index.njk               # Homepage (long scrollable page)
+├── doneer.njk              # Donation page
 ├── sitemap.njk             # XML sitemap (auto-generated)
 ├── input.css               # Tailwind CSS with custom theme
 ├── robots.txt              # SEO robots directive
@@ -81,15 +82,15 @@ npm run build        # Production build
 
 - Use Tailwind utility classes directly in templates
 - Custom theme colors are defined in `input.css` as CSS variables
-- Color palette: purple tones (primary: `#8b5cf6`, background: `#faf5ff`)
-- Custom utility classes available: `.bg-primary`, `.text-primary-dark`, `.btn`, `.btn-light`, etc.
+- Color palette: Eastern-inspired (primary: emerald green `#006D5B`, secondary: gold `#D4A417`, background: warm cream `#FBF7F0`)
+- Custom utility classes available: `.bg-primary`, `.text-primary-dark`, `.btn`, `.btn-light`, `.btn-secondary`, `.card`, etc.
 
 ### Images
 
 Images are automatically optimized for fast loading and modern browsers:
 
 - **Setup**: The `@11ty/eleventy-img` plugin (configured in `eleventy.config.js`) processes all images
-- **How to add images**: Place image files in `src/` and use standard `<img>` tags in templates
+- **How to add images**: Place image files in `src/images/` and use standard `<img>` tags in templates
 - **Paths**: Use the `| url` filter for all paths (e.g., `{{ '/images/hero.jpg' | url }}`). This is a standard Eleventy filter that applies the `pathPrefix` config, which is set via `PATH_PREFIX` env var in GitHub Actions for subdirectory hosting.
 - **Automatic optimization**:
   - Images are converted to modern formats (AVIF, WebP) with JPEG fallback

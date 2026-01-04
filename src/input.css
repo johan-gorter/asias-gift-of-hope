@@ -1,24 +1,38 @@
 @import "tailwindcss";
 
-/* Custom styles - Purple Color Palette */
+/* Custom styles - Eastern Color Palette (Middle Eastern inspired) */
 :root {
-  --primary: #8b5cf6; /* Vibrant purple */
-  --primary-dark: #6d28d9; /* Deep purple */
-  --primary-light: #a78bfa; /* Light purple */
-  --primary-lighter: #ede9fe; /* Very light purple */
-  --text: #1e1b4b; /* Dark indigo */
-  --text-muted: #4c4669; /* Muted purple */
-  --text-light: #c4b5fd; /* Light text for dark backgrounds */
-  --bg: #faf5ff; /* Soft purple tint */
-  --bg-alt: #f3e8ff; /* Alternate background */
-  --bg-dark: #3b0764; /* Dark purple (footer) */
-  --border: #ddd6fe; /* Border color */
-  --border-dark: #581c87; /* Dark border */
+  --primary: #006D5B; /* Smaragdgroen - Traditional Middle Eastern green */
+  --primary-dark: #004D40; /* Darker emerald */
+  --primary-light: #4DB6A0; /* Light emerald */
+  --primary-lighter: #E0F2EF; /* Very light emerald */
 
-  /* Button colors (purple) */
-  --btn: #7c3aed; /* Rich purple */
-  --btn-hover: #5b21b6; /* Dark purple */
+  --secondary: #D4A417; /* Rijk goud - Arabic art warmth */
+  --secondary-dark: #B8860B; /* Dark gold */
+  --secondary-light: #F5E6C8; /* Light gold */
+
+  --accent: #8B2323; /* Diep bordeaux - Persian patterns */
+  --accent-light: #C45C5C; /* Light bordeaux */
+
+  --text: #1A1A2E; /* Donker leisteen */
+  --text-muted: #4A4A5A; /* Muted text */
+  --text-light: #E8E8EC; /* Light text for dark backgrounds */
+
+  --bg: #FBF7F0; /* Warm zand/crème - Desert inspired */
+  --bg-alt: #F5EFE6; /* Alternate background */
+  --bg-dark: #1A1A2E; /* Dark background (footer) */
+
+  --border: #D4CFC5; /* Border color */
+  --border-dark: #004D40; /* Dark border */
+
+  /* Button colors */
+  --btn: #006D5B; /* Primary green */
+  --btn-hover: #004D40; /* Dark green */
   --btn-text: #ffffff; /* Button text */
+
+  /* Secondary button */
+  --btn-secondary: #D4A417; /* Gold */
+  --btn-secondary-hover: #B8860B; /* Dark gold */
 }
 
 body {
@@ -47,6 +61,15 @@ main {
 .bg-primary-lighter {
   background-color: var(--primary-lighter);
 }
+.bg-secondary {
+  background-color: var(--secondary);
+}
+.bg-secondary-light {
+  background-color: var(--secondary-light);
+}
+.bg-accent {
+  background-color: var(--accent);
+}
 .bg-theme {
   background-color: var(--bg);
 }
@@ -66,6 +89,15 @@ main {
 .text-primary-light {
   color: var(--primary-light);
 }
+.text-secondary {
+  color: var(--secondary);
+}
+.text-secondary-dark {
+  color: var(--secondary-dark);
+}
+.text-accent {
+  color: var(--accent);
+}
 .text-theme {
   color: var(--text);
 }
@@ -82,6 +114,12 @@ main {
 .border-theme-dark {
   border-color: var(--border-dark);
 }
+.border-primary {
+  border-color: var(--primary);
+}
+.border-secondary {
+  border-color: var(--secondary);
+}
 
 .hover\:text-primary:hover {
   color: var(--primary);
@@ -92,16 +130,27 @@ main {
 .hover\:text-primary-light:hover {
   color: var(--primary-light);
 }
+.hover\:text-secondary:hover {
+  color: var(--secondary);
+}
 .hover\:bg-primary-dark:hover {
   background-color: var(--primary-dark);
 }
 .hover\:bg-primary-lighter:hover {
   background-color: var(--primary-lighter);
 }
+.hover\:bg-secondary-dark:hover {
+  background-color: var(--secondary-dark);
+}
 
-/* Hero gradient */
+/* Hero gradient - Eastern inspired */
 .bg-hero-gradient {
-  background: linear-gradient(to right, var(--primary), var(--primary-dark));
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+}
+
+/* Gold accent gradient */
+.bg-gold-gradient {
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
 }
 
 /* Icon containers */
@@ -112,37 +161,59 @@ main {
   color: var(--primary);
 }
 
+.icon-container-gold {
+  background-color: var(--secondary-light);
+}
+.icon-container-gold svg {
+  color: var(--secondary-dark);
+}
+
 /* Form styles */
 .form-input {
   border-color: var(--border);
+  background-color: white;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .form-input:focus {
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+  box-shadow: 0 0 0 3px rgba(0, 109, 91, 0.2);
 }
 
 /* Button styles */
 .btn-primary {
   background-color: var(--btn);
   color: var(--btn-text);
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .btn-primary:hover {
   background-color: var(--btn-hover);
+  transform: translateY(-1px);
 }
 
 /* Generic button class for inline buttons */
 .btn {
   background-color: var(--btn);
   color: var(--btn-text);
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .btn:hover {
   background-color: var(--btn-hover);
+  transform: translateY(-1px);
+}
+
+/* Secondary button (gold) */
+.btn-secondary {
+  background-color: var(--btn-secondary);
+  color: var(--text);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--btn-secondary-hover);
+  transform: translateY(-1px);
 }
 
 /* Light button for dark/gradient backgrounds */
@@ -153,6 +224,41 @@ main {
 }
 
 .btn-light:hover {
-  background-color: var(--primary-lighter);
+  background-color: var(--secondary-light);
   transform: translateY(-1px);
+}
+
+/* Card styles */
+.card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Section divider with eastern pattern hint */
+.section-divider {
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 50%, var(--primary) 100%);
+}
+
+/* Image overlay for hero sections */
+.hero-overlay {
+  background: linear-gradient(to bottom, rgba(0, 77, 64, 0.7), rgba(26, 26, 46, 0.8));
+}
+
+/* Decorative gold border */
+.gold-border {
+  border: 2px solid var(--secondary);
+}
+
+/* Quote styling */
+.quote-mark {
+  color: var(--secondary);
+  font-size: 4rem;
+  line-height: 1;
 }

@@ -1,120 +1,224 @@
 ---
 layout: base.njk
-title: LoremCo - Home
-description: LoremCo provides innovative solutions with expert services. Contact us today to learn how we can help your business grow.
+title: Asia's Gift of Hope - Hoop en menselijkheid voor Syrië
+description: Stichting Asia's Gift of Hope biedt hoop aan kwetsbare gezinnen in Syrië door medische hulp, voedsel en onderwijs.
 ---
 
-<!-- Hero Section -->
-<section class="bg-hero-gradient text-white py-20">
-  <div class="max-w-6xl mx-auto px-6 text-center">
-    <h1 class="text-4xl md:text-5xl font-bold mb-6">
-      Lorem Ipsum Dolor Sit Amet
+<!-- Hero Section with Video Background -->
+<section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+  <div class="absolute inset-0 bg-theme-dark">
+    <iframe
+      class="absolute w-full h-full object-cover scale-150"
+      src="https://www.youtube.com/embed/LymByDEqWkM?autoplay=1&mute=1&loop=1&playlist=LymByDEqWkM&controls=0&showinfo=0&rel=0&playsinline=1&modestbranding=1"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      style="pointer-events: none;">
+    </iframe>
+    <div class="absolute inset-0 hero-overlay"></div>
+  </div>
+  <div class="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
+    <h1 class="text-4xl md:text-6xl font-bold mb-6">
+      Asia's Gift of Hope
     </h1>
     <p class="text-xl md:text-2xl mb-8 opacity-90">
-      Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-      labore et dolore magna aliqua.
+      Hoop en menselijkheid voor Syrië
     </p>
-    <a
-      href="/contact/"
-      class="btn-light inline-block px-8 py-3 rounded-lg font-semibold shadow-lg"
-      >Get in Touch</a
-    >
+    <a href="/doneer/" class="btn-secondary inline-block px-8 py-4 rounded-lg font-semibold text-lg shadow-lg">
+      Doneer Nu
+    </a>
   </div>
 </section>
 
-<!-- About Section -->
-<section class="py-16">
+<!-- Section Divider -->
+<div class="section-divider"></div>
+
+<!-- Over Ons Section -->
+<section class="py-16 bg-theme">
   <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-center mb-12">About Lorem Ipsum</h2>
-    <div class="grid md:grid-cols-2 gap-12">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
       <div>
+        <h2 class="text-3xl font-bold mb-6 text-primary">Over de Stichting</h2>
         <p class="text-theme-muted leading-relaxed mb-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-          enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat.
+          <strong>Asia's Gift of Hope</strong> is een stichting opgericht door Alaa Alamirat, geneeskundestudente aan het Erasmus MC. De stichting is vernoemd naar zijn moeder Asia, een vrouw met een gouden hart die als vrijwilliger tolkte bij Vluchtelingenwerk en altijd klaarstond voor anderen.
         </p>
         <p class="text-theme-muted leading-relaxed">
-          Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-          cupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum.
+          Onze missie is het bieden van hoop en menselijkheid aan kwetsbare gezinnen in Syrië door middel van medische hulp, voedsel, en onderwijs.
         </p>
       </div>
-      <div>
-        <p class="text-theme-muted leading-relaxed mb-4">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-          quae ab illo inventore veritatis et quasi architecto beatae
-          vitae dicta sunt explicabo.
-        </p>
-        <p class="text-theme-muted leading-relaxed">
-          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-          aut fugit, sed quia consequuntur magni dolores eos qui ratione
-          voluptatem sequi nesciunt.
-        </p>
+      <div class="relative">
+        <img
+          src="/images/alaa-met-groep-kinderen-syrie.png"
+          alt="Alaa met kinderen in Syrië"
+          class="rounded-lg shadow-lg w-full gold-border"
+        />
       </div>
     </div>
   </div>
 </section>
 
-<!-- Features Section -->
-<section class="bg-theme-alt py-16">
+<!-- Missie: Prothese Hulp -->
+<section class="py-16 bg-theme-alt">
   <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-center mb-12">Our Features</h2>
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold mb-4 text-primary">Prothese Hulp</h2>
+      <p class="text-theme-muted max-w-2xl mx-auto">
+        Een prothese herstelt niet alleen iemands waardigheid, maar zorgt ervoor dat mensen weer kunnen werken en studeren.
+      </p>
+    </div>
     <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white p-6 rounded-lg shadow-md">
-        <div class="icon-container w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold mb-2">Dolor Sit Amet</h3>
-        <p class="text-theme-muted">
-          Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua.
-        </p>
+      <div class="card p-6 text-center">
+        <img
+          src="/images/jana-blij-met-handprothese.png"
+          alt="Jana met haar nieuwe handprothese"
+          class="w-full h-48 object-cover rounded-lg mb-4"
+        />
+        <h3 class="font-semibold text-lg mb-2">Jana</h3>
+        <p class="text-theme-muted text-sm">Kan nu weer zelfstandig eten en spelen dankzij haar handprothese.</p>
       </div>
-      <div class="bg-white p-6 rounded-lg shadow-md">
-        <div class="icon-container w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold mb-2">Ut Enim Ad Minim</h3>
-        <p class="text-theme-muted">
-          Veniam quis nostrud exercitation ullamco laboris nisi ut aliquip
-          ex ea commodo consequat.
-        </p>
+      <div class="card p-6 text-center">
+        <img
+          src="/images/bikri-met-nieuwe-beenprotheses.png"
+          alt="Bikri met zijn nieuwe beenprotheses"
+          class="w-full h-48 object-cover rounded-lg mb-4"
+        />
+        <h3 class="font-semibold text-lg mb-2">Bikri</h3>
+        <p class="text-theme-muted text-sm">Verloor beide benen maar kan nu weer lopen met nieuwe protheses.</p>
       </div>
-      <div class="bg-white p-6 rounded-lg shadow-md">
-        <div class="icon-container w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold mb-2">Duis Aute Irure</h3>
-        <p class="text-theme-muted">
-          Dolor in reprehenderit in voluptate velit esse cillum dolore eu
-          fugiat nulla pariatur.
+      <div class="card p-6 text-center">
+        <img
+          src="/images/zakaria-student-met-beenprothese.png"
+          alt="Zakaria student met beenprothese"
+          class="w-full h-48 object-cover rounded-lg mb-4"
+        />
+        <h3 class="font-semibold text-lg mb-2">Zakaria</h3>
+        <p class="text-theme-muted text-sm">Student die dankzij zijn prothese weer naar school kan.</p>
+      </div>
+    </div>
+    <div class="text-center mt-8">
+      <p class="text-secondary font-semibold text-lg">Al meer dan 14 patiënten geholpen met protheses</p>
+    </div>
+  </div>
+</section>
+
+<!-- Missie: Babyvoeding & Luiers -->
+<section class="py-16 bg-theme">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="order-2 md:order-1">
+        <img
+          src="/images/baby-gezond-na-voedingshulp.png"
+          alt="Baby gezond na voedingshulp"
+          class="rounded-lg shadow-lg w-full"
+        />
+      </div>
+      <div class="order-1 md:order-2">
+        <h2 class="text-3xl font-bold mb-6 text-primary">Babyvoeding & Luiers</h2>
+        <p class="text-theme-muted leading-relaxed mb-4">
+          Veel gezinnen in Syrië kunnen geen babyvoeding of luiers betalen. Wij helpen deze gezinnen door essentiële babyproducten te verstrekken.
+        </p>
+        <p class="text-theme-muted leading-relaxed">
+          Een baby die wij hielpen was ernstig ondervoed. Na twee maanden voedingshulp was het kindje weer gezond en blij.
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA Section -->
-<section class="py-16">
+<!-- Missie: Voedselpakketten -->
+<section class="py-16 bg-theme-alt">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-3xl font-bold mb-6 text-primary">Voedselpakketten</h2>
+        <p class="text-theme-muted leading-relaxed mb-4">
+          Wij kopen brood van straatverkopers - zo slaan we twee vliegen in één klap: we helpen de verkoper én de gezinnen die het brood ontvangen.
+        </p>
+        <p class="text-theme-muted leading-relaxed">
+          Onze voedselpakketten bevatten basis levensbehoeften voor gezinnen die het moeilijk hebben.
+        </p>
+      </div>
+      <div>
+        <img
+          src="/images/brood-kopen-van-straatverkoper-1.png"
+          alt="Brood kopen van straatverkoper"
+          class="rounded-lg shadow-lg w-full"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Missie: Onderwijs -->
+<section class="py-16 bg-theme">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="order-2 md:order-1">
+        <img
+          src="/images/laptop-voor-mustafa-student.png"
+          alt="Laptop voor student Mustafa"
+          class="rounded-lg shadow-lg w-full"
+        />
+      </div>
+      <div class="order-1 md:order-2">
+        <h2 class="text-3xl font-bold mb-6 text-primary">Onderwijs Ondersteuning</h2>
+        <p class="text-theme-muted leading-relaxed mb-4">
+          Onderwijs is de sleutel tot een betere toekomst. Wij helpen studenten met schoolspullen en laptops.
+        </p>
+        <p class="text-theme-muted leading-relaxed">
+          Mustafa, een gemotiveerde student, ontving een laptop waarmee hij nu zijn studie kan voortzetten en zijn dromen kan najagen.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Over Asia Section -->
+<section class="py-16 bg-primary text-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-3xl font-bold mb-6 text-secondary">Over Asia</h2>
+        <p class="leading-relaxed mb-4 opacity-90">
+          De stichting is vernoemd naar Asia, de moeder van oprichter Alaa. Asia was een vrouw met een gouden hart die altijd klaarstond voor anderen.
+        </p>
+        <p class="leading-relaxed mb-6 opacity-90">
+          Als vrijwilliger tolkte zij bij Vluchtelingenwerk en hielp zij talloze mensen. Haar nagedachtenis leeft voort in het werk van deze stichting.
+        </p>
+        <blockquote class="border-l-4 border-secondary pl-4 italic text-lg">
+          "Achter de tranen van verdriet schuilt de glimlach der herinnering"
+        </blockquote>
+      </div>
+      <div class="flex justify-center">
+        <img
+          src="/images/portret-asia-moeder-stichting.png"
+          alt="Portret van Asia"
+          class="rounded-lg shadow-lg max-w-sm gold-border"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="py-20 bg-theme-alt">
   <div class="max-w-4xl mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+    <h2 class="text-3xl font-bold mb-6 text-primary">Help ons hoop brengen</h2>
     <p class="text-theme-muted text-lg mb-8">
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-      officia deserunt mollit anim id est laborum.
+      Met uw donatie kunnen wij meer mensen helpen met protheses, voedsel, en onderwijs. Elke bijdrage maakt een verschil.
     </p>
-    <a
-      href="/contact/"
-      class="btn inline-block px-8 py-3 rounded-lg font-semibold transition"
-      >Contact Us Today</a
-    >
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <a href="/doneer/" class="btn inline-block px-8 py-4 rounded-lg font-semibold text-lg shadow-lg">
+        Doneer Nu
+      </a>
+    </div>
+    <div class="mt-8">
+      <img
+        src="/images/qr-code-donatie.png"
+        alt="QR-code voor donatie"
+        class="mx-auto w-32 h-32 rounded-lg shadow"
+      />
+      <p class="text-theme-muted text-sm mt-2">Scan om te doneren</p>
+    </div>
   </div>
 </section>
