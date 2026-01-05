@@ -85,17 +85,46 @@ npm run build        # Production build
 - Color palette: Eastern-inspired (primary: emerald green `#006D5B`, secondary: gold `#D4A417`, background: warm cream `#FBF7F0`)
 - Custom utility classes available: `.bg-primary`, `.text-primary-dark`, `.btn`, `.btn-light`, `.btn-secondary`, `.card`, etc.
 
+### Internal Links and Paths
+
+**CRITICAL:** Always use the `| url` filter for internal links and non-image assets. This ensures paths work correctly when the site is deployed to a subdirectory.
+
+**Required format:**
+```njk
+<!-- Links -->
+<a href="{{ '/' | url }}">Home</a>
+<a href="{{ '/doneer/' | url }}">Doneer</a>
+
+<!-- Stylesheets and other assets -->
+<link rel="stylesheet" href="{{ '/style.css' | url }}">
+<link rel="icon" href="{{ '/favicon.ico' | url }}">
+```
+
+**Never use:**
+```njk
+<!-- ❌ WRONG - Missing | url filter -->
+<a href="/doneer/">Doneer</a>
+<link rel="stylesheet" href="/style.css">
+```
+
+The `| url` filter applies the `pathPrefix` configuration, which is set via the `PATH_PREFIX` environment variable in GitHub Actions for subdirectory hosting.
+
+**Note:** `<img>` tags do NOT need the `| url` filter - the `eleventyImageTransformPlugin` automatically handles path prefixes when optimizing images.
+
 ### Images
 
 Images are automatically optimized for fast loading and modern browsers:
 
 - **Setup**: The `@11ty/eleventy-img` plugin (configured in `eleventy.config.js`) processes all images
-- **How to add images**: Place image files in `src/images/` and use standard `<img>` tags in templates
-- **Paths**: Use the `| url` filter for all paths (e.g., `{{ '/images/hero.jpg' | url }}`). This is a standard Eleventy filter that applies the `pathPrefix` config, which is set via `PATH_PREFIX` env var in GitHub Actions for subdirectory hosting.
+- **How to add images**: Place image files in `src/images/` and use standard `<img>` tags with plain paths:
+  ```njk
+  <img src="/images/photo.png" alt="Description">
+  ```
 - **Automatic optimization**:
   - Images are converted to modern formats (AVIF, WebP) with JPEG fallback
   - Multiple sizes are generated for responsive loading
   - `<img>` tags are transformed into `<picture>` elements automatically
+  - Path prefixes are handled automatically by the plugin
 - **Best practices**:
   - Always include descriptive `alt` text for accessibility
   - Original images can be any common format (JPG, PNG, etc.)
