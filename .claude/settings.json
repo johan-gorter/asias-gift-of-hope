@@ -6,6 +6,8 @@
       "Bash(cat:*)",
       "Bash(npm run build:*)",
       "Bash(npm install:*)",
+      "Bash(npm run dev:*)",
+      "Bash(npm run css:*)",
       "WebSearch",
       "WebFetch(domain:github.com)",
       "mcp__playwright__browser_click",
@@ -18,6 +20,20 @@
       "mcp__playwright__browser_network_requests",
       "mcp__playwright__browser_snapshot",
       "mcp__playwright__browser_close"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npm install --silent && echo '✓ Dependencies installed' && (npm run dev > /tmp/eleventy-dev.log 2>&1 & echo $! > /tmp/eleventy-dev.pid && echo '✓ Dev server started in background (check /tmp/eleventy-dev.log for output)')",
+            "statusMessage": "Setting up development environment...",
+            "timeout": 60
+          }
+        ]
+      }
     ]
   }
 }
