@@ -6,6 +6,8 @@
       "Bash(cat:*)",
       "Bash(npm run build:*)",
       "Bash(npm install:*)",
+      "Bash(npm run dev:*)",
+      "Bash(npm run css:*)",
       "WebSearch",
       "WebFetch(domain:github.com)",
       "mcp__playwright__browser_click",
@@ -18,6 +20,64 @@
       "mcp__playwright__browser_network_requests",
       "mcp__playwright__browser_snapshot",
       "mcp__playwright__browser_close"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npm install --silent",
+            "statusMessage": "Installing dependencies..."
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"File written: $FILE_PATH\"",
+            "statusMessage": "Logging file write..."
+          }
+        ]
+      },
+      {
+        "matcher": "Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if [[ \"$FILE_PATH\" =~ \\.(js|njk|html)$ ]]; then echo \"✓ Edited $FILE_PATH - consider running build to verify changes\"; fi",
+            "statusMessage": "Checking edited file..."
+          }
+        ]
+      },
+      {
+        "matcher": "Bash(git commit*)",
+        "hooks": [
+          {
+            "type": "agent",
+            "prompt": "Verify that the build succeeds after this commit. Run 'npm run build' and check for errors. If the build fails, report the error details.",
+            "timeout": 120,
+            "statusMessage": "Verifying build after commit..."
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "*screenshot*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"💡 Tip: Use Playwright MCP tools to take screenshots of web pages\"",
+            "statusMessage": "Checking screenshot context..."
+          }
+        ]
+      }
     ]
   }
 }
