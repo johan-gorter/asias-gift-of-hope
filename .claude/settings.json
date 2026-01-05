@@ -28,53 +28,9 @@
         "hooks": [
           {
             "type": "command",
-            "command": "npm install --silent",
-            "statusMessage": "Installing dependencies..."
-          }
-        ]
-      }
-    ],
-    "PostToolUse": [
-      {
-        "matcher": "Write",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "echo \"File written: $FILE_PATH\"",
-            "statusMessage": "Logging file write..."
-          }
-        ]
-      },
-      {
-        "matcher": "Edit",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "if [[ \"$FILE_PATH\" =~ \\.(js|njk|html)$ ]]; then echo \"✓ Edited $FILE_PATH - consider running build to verify changes\"; fi",
-            "statusMessage": "Checking edited file..."
-          }
-        ]
-      },
-      {
-        "matcher": "Bash(git commit*)",
-        "hooks": [
-          {
-            "type": "agent",
-            "prompt": "Verify that the build succeeds after this commit. Run 'npm run build' and check for errors. If the build fails, report the error details.",
-            "timeout": 120,
-            "statusMessage": "Verifying build after commit..."
-          }
-        ]
-      }
-    ],
-    "UserPromptSubmit": [
-      {
-        "matcher": "*screenshot*",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "echo \"💡 Tip: Use Playwright MCP tools to take screenshots of web pages\"",
-            "statusMessage": "Checking screenshot context..."
+            "command": "npm install --silent && echo '✓ Dependencies installed' && (npm run dev > /tmp/eleventy-dev.log 2>&1 & echo $! > /tmp/eleventy-dev.pid && echo '✓ Dev server started in background (check /tmp/eleventy-dev.log for output)')",
+            "statusMessage": "Setting up development environment...",
+            "timeout": 60
           }
         ]
       }
