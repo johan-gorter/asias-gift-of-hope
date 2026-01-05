@@ -1,7 +1,0 @@
-# Robots.txt for Asia's Gift of Hope
-
-User-agent: *
-Allow: /
-
-# Sitemap
-Sitemap: https://asiasgiftofhope.nl/sitemap.xml
