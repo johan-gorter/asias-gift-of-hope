@@ -14,6 +14,7 @@ export default function (eleventyConfig) {
     formats: ["avif", "webp", "auto"],
     widths: ["auto", 400, 800, 1200],
     urlPath: `${pathPrefix}img/`,
+    outputDir: "./_site/img/",
     defaultAttributes: {
       loading: "lazy",
       decoding: "async",
@@ -21,7 +22,7 @@ export default function (eleventyConfig) {
   });
 
   return {
-    pathPrefix: process.env.PATH_PREFIX || "/",
+    pathPrefix: pathPrefix,
     dir: {
       input: "src",
       output: "_site",
