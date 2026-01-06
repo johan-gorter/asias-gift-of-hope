@@ -28,7 +28,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "npm install --silent && echo '✓ Dependencies installed' && (npm run dev > /tmp/eleventy-dev.log 2>&1 & echo $! > /tmp/eleventy-dev.pid && echo '✓ Dev server started in background (check /tmp/eleventy-dev.log for output)')",
+            "command": "npm install -g @playwright/mcp --silent && npm install --silent && echo '✓ Dependencies installed' && (npm run dev > /tmp/eleventy-dev.log 2>&1 & echo $! > /tmp/eleventy-dev.pid && echo '✓ Dev server started in background (check /tmp/eleventy-dev.log for output)')",
             "statusMessage": "Setting up development environment...",
             "timeout": 60
           }
