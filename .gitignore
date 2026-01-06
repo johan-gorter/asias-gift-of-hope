@@ -28,3 +28,6 @@ Thumbs.db
 
 # Claude Code local settings
 .claude/settings.local.json
+
+# Temporary preview files
+mobile-preview.png
