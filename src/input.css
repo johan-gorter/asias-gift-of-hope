@@ -153,9 +153,11 @@ main {
   background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
 }
 
-/* Icon containers */
+/* Icon containers - Eastern rounded style */
 .icon-container {
   background-color: var(--primary-lighter);
+  border-radius: 2rem;
+  padding: 1.5rem;
 }
 .icon-container svg {
   color: var(--primary);
@@ -163,6 +165,8 @@ main {
 
 .icon-container-gold {
   background-color: var(--secondary-light);
+  border-radius: 2rem;
+  padding: 1.5rem;
 }
 .icon-container-gold svg {
   color: var(--secondary-dark);
@@ -180,64 +184,74 @@ main {
   box-shadow: 0 0 0 3px rgba(0, 109, 91, 0.2);
 }
 
-/* Button styles */
+/* Button styles - Eastern rounded style */
 .btn-primary {
   background-color: var(--btn);
   color: var(--btn-text);
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 9999px;
 }
 
 .btn-primary:hover {
   background-color: var(--btn-hover);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 109, 91, 0.3);
 }
 
 /* Generic button class for inline buttons */
 .btn {
   background-color: var(--btn);
   color: var(--btn-text);
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 9999px;
 }
 
 .btn:hover {
   background-color: var(--btn-hover);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 109, 91, 0.3);
 }
 
-/* Secondary button (gold) */
+/* Secondary button (gold) - Eastern rounded style */
 .btn-secondary {
   background-color: var(--btn-secondary);
   color: var(--text);
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 9999px;
 }
 
 .btn-secondary:hover {
   background-color: var(--btn-secondary-hover);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(212, 164, 23, 0.4);
 }
 
-/* Light button for dark/gradient backgrounds */
+/* Light button for dark/gradient backgrounds - Eastern rounded style */
 .btn-light {
   background-color: white;
   color: var(--primary-dark);
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 9999px;
 }
 
 .btn-light:hover {
   background-color: var(--secondary-light);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.3);
 }
 
-/* Card styles */
+/* Card styles - Eastern rounded style */
 .card {
   background-color: white;
-  border-radius: 0.5rem;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
 }
 
 .card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 24px rgba(0, 109, 91, 0.15);
+  transform: translateY(-4px);
 }
 
 /* Section divider with eastern pattern hint */
@@ -251,9 +265,11 @@ main {
   background: linear-gradient(to bottom, rgba(0, 77, 64, 0.7), rgba(26, 26, 46, 0.8));
 }
 
-/* Decorative gold border */
+/* Decorative gold border - Eastern rounded style */
 .gold-border {
-  border: 2px solid var(--secondary);
+  border: 3px solid var(--secondary);
+  border-radius: 2rem;
+  box-shadow: 0 0 20px rgba(212, 164, 23, 0.2);
 }
 
 /* Quote styling */
@@ -261,4 +277,46 @@ main {
   color: var(--secondary);
   font-size: 4rem;
   line-height: 1;
+}
+
+/* Eastern decorative elements */
+.eastern-ornament {
+  position: relative;
+}
+
+.eastern-ornament::before,
+.eastern-ornament::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, var(--secondary) 0%, transparent 70%);
+  opacity: 0.15;
+  border-radius: 50%;
+}
+
+.eastern-ornament::before {
+  top: -30px;
+  left: -30px;
+}
+
+.eastern-ornament::after {
+  bottom: -30px;
+  right: -30px;
+}
+
+/* Rounded image containers */
+.rounded-image {
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+.rounded-image-xl {
+  border-radius: 3rem;
+  overflow: hidden;
+}
+
+/* Form styles with rounder borders */
+.form-input {
+  border-radius: 1.5rem;
 }
