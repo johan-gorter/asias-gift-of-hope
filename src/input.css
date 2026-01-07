@@ -168,10 +168,11 @@ main {
   color: var(--secondary-dark);
 }
 
-/* Form styles */
+/* Form styles - Eastern inspired with rounded corners */
 .form-input {
   border-color: var(--border);
   background-color: white;
+  border-radius: 1.25rem;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -180,10 +181,11 @@ main {
   box-shadow: 0 0 0 3px rgba(0, 109, 91, 0.2);
 }
 
-/* Button styles */
+/* Button styles - Eastern inspired with generous rounded corners */
 .btn-primary {
   background-color: var(--btn);
   color: var(--btn-text);
+  border-radius: 1.5rem;
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
@@ -196,6 +198,7 @@ main {
 .btn {
   background-color: var(--btn);
   color: var(--btn-text);
+  border-radius: 1.5rem;
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
@@ -208,6 +211,7 @@ main {
 .btn-secondary {
   background-color: var(--btn-secondary);
   color: var(--text);
+  border-radius: 1.5rem;
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
@@ -220,6 +224,7 @@ main {
 .btn-light {
   background-color: white;
   color: var(--primary-dark);
+  border-radius: 1.5rem;
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
@@ -228,10 +233,10 @@ main {
   transform: translateY(-1px);
 }
 
-/* Card styles */
+/* Card styles - Eastern inspired with generous rounded corners */
 .card {
   background-color: white;
-  border-radius: 0.5rem;
+  border-radius: 1.5rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
@@ -261,4 +266,30 @@ main {
   color: var(--secondary);
   font-size: 4rem;
   line-height: 1;
+}
+
+/* Rounded corners for Eastern aesthetic */
+img {
+  border-radius: 1.5rem;
+}
+
+.rounded-lg {
+  border-radius: 1.5rem !important;
+}
+
+/* Extra generous rounded corners for special elements */
+.rounded-xl {
+  border-radius: 2rem !important;
+}
+
+/* Icon containers with rounded corners */
+.icon-container,
+.icon-container-gold {
+  border-radius: 1.25rem;
+}
+
+/* Header rounded bottom corners */
+header {
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
 }
