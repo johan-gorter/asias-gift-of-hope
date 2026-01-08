@@ -46,7 +46,7 @@ src/
 │   └── footer.njk          # Site footer
 ├── images/                 # Source images (auto-optimized)
 ├── index.njk               # Homepage (long scrollable page)
-├── doneer.njk              # Donation page
+├── PAGENAME.njk            # other pages
 ├── sitemap.njk             # XML sitemap (auto-generated)
 ├── input.css               # Tailwind CSS with custom theme
 ├── robots.txt              # SEO robots directive
@@ -141,27 +141,20 @@ Images are automatically optimized for fast loading and modern browsers:
 - `package.json` - Dependencies and npm scripts
 - `src/_data/metadata.json` - Site-wide metadata
 
-## Things to Avoid
-
-- Do not edit files in `_site/` directly (they're generated)
-- Do not add inline `<style>` tags; use Tailwind classes or extend `input.css`
-
 ## Testing
 
-No automated tests. Verify changes visually using the **Playwright MCP server**:
+No automated tests. Verify changes visually using the **Playwright**:
 
 1. Use the `npm run dev` that was started on session startup
-2. Use Playwright MCP tools to navigate to the page and take screenshots
+2. Use Playwright to take screenshots, e.g.:
+   - `npx playwright screenshot --viewport-size=1568,1568 http://localhost:8080/ /tmp/desktop-screenshot.png`
+   - `npx playwright screenshot --viewport-size=390,1568 http://localhost:8080/ /tmp/mobile-screenshot.png`
 3. Review for visual imperfections and correct them
 4. For long pages, add `<a name="section-name"></a>` anchors to scroll to specific sections when taking screenshots (e.g., navigate to `http://localhost:8080/#section-name`)
 5. Share screenshots with the user 
  - use the `assets` branch (orphan branch for static files)
- - gh api --method PUT /repos/ORG/REPO/contents/screenshots/NAME.png \
+ - gh api --method PUT /repos/ORG/REPO/contents/screenshots/FEATURE-BRANCH/NAME.png \
      -f message="Add screenshot" \
      -f branch="assets" \
      -f content="$(base64 -i /path/to/screenshot.png)"
- - Display inline: `![screenshot](https://raw.githubusercontent.com/johan-gorter/REPO/assets/screenshots/NAME.png)`
-
-## Deployment
-
-The site deploys to **GitHub Pages**. Run `npm run build` to generate production files in `_site/`.
+ - Display inline: `![screenshot](https://raw.githubusercontent.com/ORG/REPO/assets/screenshots/FEATURE-BRANCH/NAME.png)`

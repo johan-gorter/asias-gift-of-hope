@@ -8,18 +8,9 @@
       "Bash(npm install:*)",
       "Bash(npm run dev:*)",
       "Bash(npm run css:*)",
+      "Bash(npx playwright:*)",
       "WebSearch",
-      "WebFetch(domain:github.com)",
-      "mcp__playwright__browser_click",
-      "mcp__playwright__browser_evaluate",
-      "mcp__playwright__browser_press_key",
-      "mcp__playwright__browser_run_code",
-      "mcp__playwright__browser_navigate",
-      "mcp__playwright__browser_take_screenshot",
-      "mcp__playwright__browser_console_messages",
-      "mcp__playwright__browser_network_requests",
-      "mcp__playwright__browser_snapshot",
-      "mcp__playwright__browser_close"
+      "WebFetch(domain:github.com)"
     ]
   },
   "hooks": {
@@ -28,7 +19,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "npm install --silent && echo '✓ Dependencies installed' && (npm run dev > /tmp/eleventy-dev.log 2>&1 & echo $! > /tmp/eleventy-dev.pid && echo '✓ Dev server started in background (check /tmp/eleventy-dev.log for output)')",
+            "command": "npm install --silent && npx playwright install chromium > /dev/null 2>&1 && echo '✓ Dependencies installed' && (npm run dev > /tmp/eleventy-dev.log 2>&1 & echo $! > /tmp/eleventy-dev.pid && echo '✓ Dev server started in background (check /tmp/eleventy-dev.log for output)')",
             "statusMessage": "Setting up development environment...",
             "timeout": 60
           }
