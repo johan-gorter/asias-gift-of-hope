@@ -82,7 +82,6 @@ npm run build        # Production build
 
 - Use Tailwind utility classes directly in templates
 - Custom theme colors are defined in `input.css` as CSS variables
-- Color palette: Eastern-inspired (primary: emerald green `#006D5B`, secondary: gold `#D4A417`, background: warm cream `#FBF7F0`)
 - Custom utility classes available: `.bg-primary`, `.text-primary-dark`, `.btn`, `.btn-light`, `.btn-secondary`, `.card`, etc.
 
 ### Internal Links and Paths
@@ -146,16 +145,22 @@ Images are automatically optimized for fast loading and modern browsers:
 
 - Do not edit files in `_site/` directly (they're generated)
 - Do not add inline `<style>` tags; use Tailwind classes or extend `input.css`
-- Do not remove passthrough copy entries in `eleventy.config.js` without understanding their purpose
 
 ## Testing
 
 No automated tests. Verify changes visually using the **Playwright MCP server**:
 
-1. Run `npm run dev` in the background to start the dev server
+1. Use the `npm run dev` that was started on session startup
 2. Use Playwright MCP tools to navigate to the page and take screenshots
 3. Review for visual imperfections and correct them
 4. For long pages, add `<a name="section-name"></a>` anchors to scroll to specific sections when taking screenshots (e.g., navigate to `http://localhost:8080/#section-name`)
+5. Share screenshots with the user 
+ - use the `assets` branch (orphan branch for static files)
+ - gh api --method PUT /repos/ORG/REPO/contents/screenshots/NAME.png \
+     -f message="Add screenshot" \
+     -f branch="assets" \
+     -f content="$(base64 -i /path/to/screenshot.png)"
+ - Display inline: `![screenshot](https://raw.githubusercontent.com/johan-gorter/REPO/assets/screenshots/NAME.png)`
 
 ## Deployment
 
