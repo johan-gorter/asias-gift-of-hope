@@ -9,6 +9,7 @@
       "Bash(npm run dev:*)",
       "Bash(npm run css:*)",
       "Bash(npx playwright:*)",
+      "Bash(gh:*)",
       "WebSearch",
       "WebFetch(domain:github.com)"
     ]
