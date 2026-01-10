@@ -15,6 +15,11 @@ export default function (eleventyConfig) {
     widths: ["auto", 400, 800, 1200],
     urlPath: `${pathPrefix}img/`,
     outputDir: "./_site/img/",
+    filenameFormat: function (id, src, width, format) {
+      // Ensure filename doesn't start with underscore by adding 'i' prefix if needed
+      const hash = id.startsWith('_') ? 'i' + id : id;
+      return `${hash}-${width}.${format}`;
+    },
     defaultAttributes: {
       loading: "lazy",
       decoding: "async",
