@@ -143,18 +143,15 @@ Images are automatically optimized for fast loading and modern browsers:
 
 ## Testing
 
-No automated tests. Verify changes visually using the **Playwright**:
+No automated tests. Verify changes visually using **Playwright**:
 
 1. Use the `npm run dev` server that was started on session startup
-2. Use Playwright to take screenshots, e.g.:
-   - `npx playwright screenshot --viewport-size=1568,1568 http://localhost:8080/ /tmp/desktop-screenshot.png`
-   - `npx playwright screenshot --viewport-size=390,1568 http://localhost:8080/ /tmp/mobile-screenshot.png`
-3. Review for visual imperfections and correct them
-4. For long pages, add `<a name="section-name"></a>` anchors to scroll to specific sections when taking screenshots (e.g., navigate to `http://localhost:8080/#section-name`)
-5. Share screenshots with the user 
- - use the `claude/screenshots` branch (orphan branch for static files)
- - gh api --method PUT /repos/ORG/REPO/contents/CURRENT-FEATURE-BRANCH/SCREENSHOT-NAME.png \
-     -f message="Add screenshot" \
-     -f branch="claude/screenshots" \
-     -f content="$(base64 -i /path/to/screenshot.png)"
- - Display inline: `![screenshot](https://raw.githubusercontent.com/ORG/REPO/claude/screenshots/CURRENT-FEATURE-BRANCH/SCREENSHOT-NAME.png)`
+2. Remove all previous screenshots: `rm -rf screenshots/`
+3. Create screenshots directory: `mkdir -p screenshots`
+4. Take screenshots using common resolutions:
+   - Desktop: `npx playwright screenshot --viewport-size=1568,1568 http://localhost:8080/ screenshots/desktop.png`
+   - Mobile: `npx playwright screenshot --viewport-size=375,667 http://localhost:8080/ screenshots/mobile.png`
+5. For long pages, add `<a name="section-name"></a>` anchors to scroll to specific sections (navigate to `http://localhost:8080/#section-name`)
+6. Review screenshots for visual imperfections and correct them
+7. Commit screenshots to the working branch and push
+8. Display screenshots to the user using raw GitHub links
