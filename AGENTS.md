@@ -148,32 +148,22 @@ No automated tests. Verify changes visually using **screenshots**:
 1. Use the `npm run dev` server that was started on session startup
 2. Remove all previous screenshots: `rm -rf screenshots/`
 3. Create screenshots directory: `mkdir -p screenshots`
-4. Take screenshots using the appropriate method:
-
-   **Method 1: Playwright (preferred, if available)**
+4. Take screenshots using Chromium headless:
    ```bash
-   npx playwright screenshot --viewport-size=1568,1568 http://localhost:8080/ screenshots/desktop.png
-   npx playwright screenshot --viewport-size=375,667 http://localhost:8080/ screenshots/mobile.png
-   ```
-
-   **Method 2: Direct Chromium (fallback if Playwright fails)**
-   ```bash
-   # Desktop
+   # Desktop (1568x1568)
    /root/.cache/ms-playwright/chromium-1194/chrome-linux/chrome \
      --headless --disable-gpu --no-sandbox \
      --screenshot=screenshots/desktop.png \
      --window-size=1568,1568 \
      http://localhost:8080/ 2>&1 | grep "bytes written"
 
-   # Mobile
+   # Mobile (375x667)
    /root/.cache/ms-playwright/chromium-1194/chrome-linux/chrome \
      --headless --disable-gpu --no-sandbox \
      --screenshot=screenshots/mobile.png \
      --window-size=375,667 \
      http://localhost:8080/ 2>&1 | grep "bytes written"
    ```
-
-   **Note:** Playwright requires exact browser version match. If you see "Executable doesn't exist at chromium_headless_shell-1200", use Method 2 (direct Chromium).
 
 5. For long pages, add `<a name="section-name"></a>` anchors to scroll to specific sections (navigate to `http://localhost:8080/#section-name`)
 6. Review screenshots for visual imperfections and correct them
