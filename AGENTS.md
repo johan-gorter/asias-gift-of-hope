@@ -151,13 +151,13 @@ No automated tests. Verify changes visually using **screenshots**:
 4. Take screenshots using Chromium headless (symlink created during session startup):
    ```bash
    # Desktop (1568x1568)
-   /tmp/chrome --headless --disable-gpu --no-sandbox \
+   /tmp/chromium --headless --disable-gpu --no-sandbox \
      --screenshot=screenshots/desktop.png \
      --window-size=1568,1568 \
      http://localhost:8080/
 
    # Mobile (375x667)
-   /tmp/chrome --headless --disable-gpu --no-sandbox \
+   /tmp/chromium --headless --disable-gpu --no-sandbox \
      --screenshot=screenshots/mobile.png \
      --window-size=375,667 \
      http://localhost:8080/
