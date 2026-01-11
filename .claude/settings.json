@@ -19,7 +19,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "npm install --silent && npx playwright install chromium > /dev/null 2>&1 && echo '✓ Dependencies installed' && (npm run dev > /tmp/eleventy-dev.log 2>&1 & echo $! > /tmp/eleventy-dev.pid && echo '✓ Dev server started in background (check /tmp/eleventy-dev.log for output)')",
+            "command": "npm install --silent && echo '✓ Dependencies installed' && (npx playwright install chromium 2>&1 | grep -E 'Downloaded|already' || echo '⚠ Playwright install skipped (using cached browsers)') && (npm run dev > /tmp/eleventy-dev.log 2>&1 & echo $! > /tmp/eleventy-dev.pid && sleep 2 && echo '✓ Dev server started in background' && echo '  Logs: /tmp/eleventy-dev.log' && echo \"  URL: http://localhost:8080/\")",
             "statusMessage": "Setting up development environment...",
             "timeout": 60
           }
