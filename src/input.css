@@ -7,9 +7,9 @@
   --primary-light: #4DB6A0; /* Light emerald */
   --primary-lighter: #E0F2EF; /* Very light emerald */
 
-  --secondary: #D4A417; /* Rijk goud - Arabic art warmth */
-  --secondary-dark: #B8860B; /* Dark gold */
-  --secondary-light: #F5E6C8; /* Light gold */
+  --secondary: #806010; /* Rijk goud - Arabic art warmth (optimized for light backgrounds) */
+  --secondary-dark: #6B5205; /* Dark gold */
+  --secondary-light: #E8C87A; /* Light gold (for dark backgrounds) */
 
   --accent: #8B2323; /* Diep bordeaux - Persian patterns */
   --accent-light: #C45C5C; /* Light bordeaux */
@@ -31,8 +31,8 @@
   --btn-text: #ffffff; /* Button text */
 
   /* Secondary button */
-  --btn-secondary: #D4A417; /* Gold */
-  --btn-secondary-hover: #B8860B; /* Dark gold */
+  --btn-secondary: #B8860B; /* Gold */
+  --btn-secondary-hover: #9B7507; /* Dark gold */
 }
 
 body {
@@ -94,6 +94,9 @@ main {
 }
 .text-secondary-dark {
   color: var(--secondary-dark);
+}
+.text-secondary-light {
+  color: var(--secondary-light);
 }
 .text-accent {
   color: var(--accent);
