@@ -150,19 +150,20 @@ No automated tests. Verify changes visually using **screenshots**:
 3. Create screenshots directory: `mkdir -p screenshots`
 4. Take screenshots using Chromium headless:
    ```bash
+   # Find Chromium binary (version-agnostic)
+   CHROME=$(find /root/.cache/ms-playwright -name "chrome" -type f -path "*/chrome-linux/chrome" 2>/dev/null | head -1)
+
    # Desktop (1568x1568)
-   /root/.cache/ms-playwright/chromium-1194/chrome-linux/chrome \
-     --headless --disable-gpu --no-sandbox \
+   $CHROME --headless --disable-gpu --no-sandbox \
      --screenshot=screenshots/desktop.png \
      --window-size=1568,1568 \
-     http://localhost:8080/ 2>&1 | grep "bytes written"
+     http://localhost:8080/
 
    # Mobile (375x667)
-   /root/.cache/ms-playwright/chromium-1194/chrome-linux/chrome \
-     --headless --disable-gpu --no-sandbox \
+   $CHROME --headless --disable-gpu --no-sandbox \
      --screenshot=screenshots/mobile.png \
      --window-size=375,667 \
-     http://localhost:8080/ 2>&1 | grep "bytes written"
+     http://localhost:8080/
    ```
 
 5. For long pages, add `<a name="section-name"></a>` anchors to scroll to specific sections (navigate to `http://localhost:8080/#section-name`)
