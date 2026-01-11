@@ -8,7 +8,6 @@
       "Bash(npm install:*)",
       "Bash(npm run dev:*)",
       "Bash(npm run css:*)",
-      "Bash(npx playwright:*)",
       "WebSearch",
       "WebFetch(domain:github.com)"
     ]
@@ -19,7 +18,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "npm install --silent && npx playwright install chromium > /dev/null 2>&1 && echo '✓ Dependencies installed' && (npm run dev > /tmp/eleventy-dev.log 2>&1 & echo $! > /tmp/eleventy-dev.pid && echo '✓ Dev server started in background (check /tmp/eleventy-dev.log for output)')",
+            "command": "npm install --silent && echo '✓ Dependencies installed' && CHROME=$(find /root/.cache/ms-playwright -name chrome -type f -path '*/chrome-linux/chrome' 2>/dev/null | head -1) && ln -sf \"$CHROME\" /tmp/chromium && echo '✓ Chromium symlink created at /tmp/chromium' && (npm run dev > /tmp/eleventy-dev.log 2>&1 & echo $! > /tmp/eleventy-dev.pid && sleep 3 && if curl -sf http://localhost:8080/ > /dev/null 2>&1; then echo '✓ Dev server running at http://localhost:8080/'; else echo '⚠ Dev server starting (check /tmp/eleventy-dev.log)'; fi)",
             "statusMessage": "Setting up development environment...",
             "timeout": 60
           }
