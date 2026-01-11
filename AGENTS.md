@@ -148,19 +148,16 @@ No automated tests. Verify changes visually using **screenshots**:
 1. Use the `npm run dev` server that was started on session startup
 2. Remove all previous screenshots: `rm -rf screenshots/`
 3. Create screenshots directory: `mkdir -p screenshots`
-4. Take screenshots using Chromium headless:
+4. Take screenshots using Chromium headless (symlink created during session startup):
    ```bash
-   # Find Chromium binary (version-agnostic)
-   CHROME=$(find /root/.cache/ms-playwright -name "chrome" -type f -path "*/chrome-linux/chrome" 2>/dev/null | head -1)
-
    # Desktop (1568x1568)
-   $CHROME --headless --disable-gpu --no-sandbox \
+   /tmp/chrome --headless --disable-gpu --no-sandbox \
      --screenshot=screenshots/desktop.png \
      --window-size=1568,1568 \
      http://localhost:8080/
 
    # Mobile (375x667)
-   $CHROME --headless --disable-gpu --no-sandbox \
+   /tmp/chrome --headless --disable-gpu --no-sandbox \
      --screenshot=screenshots/mobile.png \
      --window-size=375,667 \
      http://localhost:8080/
