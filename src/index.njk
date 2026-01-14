@@ -4,23 +4,23 @@ title: Asia's Gift of Hope - Hoop en menselijkheid voor Syrië
 description: Stichting Asia's Gift of Hope biedt hoop aan kwetsbare gezinnen in Syrië door medische hulp, voedsel en onderwijs.
 ---
 
-<!-- Hero Section with Video Facade (loads on interaction for performance) -->
-<section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-  <div class="absolute inset-0 bg-theme-dark">
-    <!-- Video Facade - shows thumbnail, loads YouTube on user interaction -->
+<!-- Hero Section -->
+<section class="relative overflow-hidden">
+  <!-- Background image/video with 16:9 aspect ratio -->
+  <div class="relative w-full aspect-video overflow-hidden">
     <div id="video-facade" class="absolute inset-0">
       <img
         src="/images/oorlogsschade-syrie-mensen-lopen-door-puin.png"
-        alt=""
-        class="w-full h-full object-cover scale-110"
+        alt="Situatie in Syrië"
+        class="w-full h-full object-cover"
         fetchpriority="high"
       />
     </div>
     <!-- YouTube iframe container (hidden until interaction) -->
-    <div id="video-container" class="absolute inset-0 hidden">
+    <div id="video-container" class="absolute inset-0 hidden overflow-hidden">
       <iframe
         id="youtube-iframe"
-        class="absolute w-full h-full object-cover scale-150"
+        class="absolute inset-0 w-full h-full"
         src=""
         data-src="https://www.youtube-nocookie.com/embed/LymByDEqWkM?autoplay=1&mute=1&loop=1&playlist=LymByDEqWkM&controls=0&showinfo=0&rel=0&playsinline=1&modestbranding=1"
         frameborder="0"
@@ -30,20 +30,25 @@ description: Stichting Asia's Gift of Hope biedt hoop aan kwetsbare gezinnen in 
         style="pointer-events: none;">
       </iframe>
     </div>
-    <div class="absolute inset-0 hero-overlay"></div>
-  </div>
-  <div class="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
-    <h1 class="text-4xl md:text-6xl font-bold mb-6">
-      Asia's Gift of Hope
-    </h1>
-    <p class="text-xl md:text-2xl mb-8 opacity-90">
-      Hoop en menselijkheid voor Syrië
-    </p>
-    <a href="{{ '/doneer/' | url }}" class="btn-secondary inline-block px-8 py-4 rounded-lg font-semibold text-lg shadow-lg">
-      Doneer Nu
-    </a>
+    <!-- Gradient overlay -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+    <!-- Text overlay at bottom -->
+    <div class="absolute bottom-0 left-0 right-0 p-4 sm:p-8 text-white">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-xl sm:text-3xl md:text-5xl font-bold mb-2">
+          Asia's Gift of Hope
+        </h1>
+        <p class="text-sm sm:text-lg md:text-xl opacity-90 mb-4">
+          Hoop en menselijkheid voor Syrië
+        </p>
+        <a href="{{ '/doneer/' | url }}" class="btn-secondary inline-block px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold text-base sm:text-lg shadow-lg">
+          Doneer Nu
+        </a>
+      </div>
+    </div>
   </div>
 </section>
+
 
 <!-- Lazy load video on user interaction -->
 <script>
