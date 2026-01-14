@@ -1,31 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#006D5B">
+    <meta name="color-scheme" content="light">
     <title>Asia&#39;s Gift of Hope - Hoop en menselijkheid voor Syrië</title>
     <meta name="description" content="Stichting Asia&#39;s Gift of Hope biedt hoop aan kwetsbare gezinnen in Syrië door medische hulp, voedsel en onderwijs.">
     <link rel="canonical" href="https://asiasgiftofhope.nl/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://asiasgiftofhope.nl/">
+    <meta property="og:title" content="Asia&#39;s Gift of Hope - Hoop en menselijkheid voor Syrië">
+    <meta property="og:description" content="Stichting Asia&#39;s Gift of Hope biedt hoop aan kwetsbare gezinnen in Syrië door medische hulp, voedsel en onderwijs.">
+    <meta property="og:image" content="https://asiasgiftofhope.nl/images/alaa-met-groep-kinderen-syrie.png">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:site_name" content="Asia&#39;s Gift of Hope">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Asia&#39;s Gift of Hope - Hoop en menselijkheid voor Syrië">
+    <meta name="twitter:description" content="Stichting Asia&#39;s Gift of Hope biedt hoop aan kwetsbare gezinnen in Syrië door medische hulp, voedsel en onderwijs.">
+    <meta name="twitter:image" content="https://asiasgiftofhope.nl/images/alaa-met-groep-kinderen-syrie.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NonprofitOrganization",
+      "name": "Asia's Gift of Hope",
+      "alternateName": "Stichting Asia's Gift of Hope",
+      "url": "https://asiasgiftofhope.nl",
+      "logo": "https://asiasgiftofhope.nl/apple-touch-icon.png",
+      "description": "Stichting voor humanitaire hulp in Syrië - Hoop en menselijkheid voor kwetsbare gezinnen",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Syria"
+      },
+      "knowsLanguage": "nl",
+      "email": "info@asiasgiftofhope.nl"
+    }
+    </script>
 
     <!-- Favicon -->
     <link rel="icon" href="/asias-gift-of-hope/favicon.ico">
     <link rel="apple-touch-icon" href="/asias-gift-of-hope/apple-touch-icon.png">
 
-    <!-- Font -->
+    <!-- Font - Optimized async loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+    </noscript>
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="/asias-gift-of-hope/style.css">
   </head>
   <body>
+    <!-- Skip to main content link for keyboard users -->
+    <a href="#main-content" class="skip-link">
+      Ga naar hoofdinhoud
+    </a>
+
     <!-- Header -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
   <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
     <a href="/asias-gift-of-hope/" class="flex items-center gap-3 hover:opacity-90 transition">
       <!-- Lotus Logo SVG -->
-      <svg class="w-10 h-10" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg class="w-10 h-10" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Asia's Gift of Hope logo">
         <!-- Center petal -->
         <path d="M50 10 C50 10, 35 35, 35 55 C35 70, 42 80, 50 85 C58 80, 65 70, 65 55 C65 35, 50 10, 50 10Z" fill="#006D5B"></path>
         <!-- Left petal -->
@@ -55,13 +100,20 @@
 
 
     <!-- Main Content -->
-    <main>
+    <main id="main-content">
       
-<!-- Hero Section with Video Background -->
+<!-- Hero Section with Video Facade (loads on interaction for performance) -->
 <section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
   <div class="absolute inset-0 bg-theme-dark">
-    <iframe class="absolute w-full h-full object-cover scale-150" src="https://www.youtube-nocookie.com/embed/LymByDEqWkM?autoplay=1&mute=1&loop=1&playlist=LymByDEqWkM&controls=0&showinfo=0&rel=0&playsinline=1&modestbranding=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" style="pointer-events: none;">
-    </iframe>
+    <!-- Video Facade - shows thumbnail, loads YouTube on user interaction -->
+    <div id="video-facade" class="absolute inset-0">
+      <picture><source type="image/avif" srcset="/asias-gift-of-hope/img/gFdqNE1YEj-400.avif 400w, /asias-gift-of-hope/img/gFdqNE1YEj-547.avif 547w" sizes="auto"><source type="image/webp" srcset="/asias-gift-of-hope/img/gFdqNE1YEj-400.webp 400w, /asias-gift-of-hope/img/gFdqNE1YEj-547.webp 547w" sizes="auto"><img loading="lazy" decoding="async" src="/asias-gift-of-hope/img/gFdqNE1YEj-400.png" alt="" class="w-full h-full object-cover scale-110" fetchpriority="high" width="547" height="539" srcset="/asias-gift-of-hope/img/gFdqNE1YEj-400.png 400w, /asias-gift-of-hope/img/gFdqNE1YEj-547.png 547w" sizes="auto"></picture>
+    </div>
+    <!-- YouTube iframe container (hidden until interaction) -->
+    <div id="video-container" class="absolute inset-0 hidden">
+      <iframe id="youtube-iframe" class="absolute w-full h-full object-cover scale-150" src="" data-src="https://www.youtube-nocookie.com/embed/LymByDEqWkM?autoplay=1&mute=1&loop=1&playlist=LymByDEqWkM&controls=0&showinfo=0&rel=0&playsinline=1&modestbranding=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" title="Video over het werk van Asia's Gift of Hope in Syrië" style="pointer-events: none;">
+      </iframe>
+    </div>
     <div class="absolute inset-0 hero-overlay"></div>
   </div>
   <div class="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
@@ -76,6 +128,30 @@
     </a>
   </div>
 </section>
+
+<!-- Lazy load video on user interaction -->
+<script>
+(function() {
+  var loaded = false;
+  function loadVideo() {
+    if (loaded) return;
+    loaded = true;
+    var container = document.getElementById('video-container');
+    var facade = document.getElementById('video-facade');
+    var iframe = document.getElementById('youtube-iframe');
+    if (iframe && container && facade) {
+      iframe.src = iframe.dataset.src;
+      container.classList.remove('hidden');
+      facade.style.opacity = '0';
+      facade.style.transition = 'opacity 0.5s';
+    }
+  }
+  ['scroll', 'mousemove', 'touchstart', 'keydown'].forEach(function(e) {
+    document.addEventListener(e, loadVideo, { once: true, passive: true });
+  });
+  setTimeout(loadVideo, 3000);
+})();
+</script>
 
 <!-- Section Divider -->
 <div class="section-divider"></div>
@@ -243,7 +319,7 @@
       <div>
         <div class="flex items-center gap-3 mb-4">
           <!-- Lotus Logo SVG (white version) -->
-          <svg class="w-8 h-8" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="w-8 h-8" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Asia's Gift of Hope logo">
             <path d="M50 10 C50 10, 35 35, 35 55 C35 70, 42 80, 50 85 C58 80, 65 70, 65 55 C65 35, 50 10, 50 10Z" fill="#4DB6A0"></path>
             <path d="M30 25 C30 25, 15 45, 18 60 C20 72, 30 78, 40 80 C38 70, 35 55, 30 25Z" fill="#4DB6A0" opacity="0.7"></path>
             <path d="M70 25 C70 25, 85 45, 82 60 C80 72, 70 78, 60 80 C62 70, 65 55, 70 25Z" fill="#4DB6A0" opacity="0.7"></path>
