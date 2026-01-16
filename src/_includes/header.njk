@@ -17,12 +17,12 @@
     <div class="flex items-center gap-2 sm:gap-4">
       <!-- Language Switcher -->
       {% if lang == 'en' %}
-      <a href="{{ page.url | replace('/en/', '/') | url }}" class="text-theme-muted hover:text-primary transition text-sm sm:text-base" aria-label="{{ t.switchToDutch }}">
-        🇳🇱 NL
+      <a href="{{ page.url | replace('/en/', '/') | url }}" class="text-theme-muted hover:text-primary transition text-sm sm:text-base font-medium" aria-label="{{ t.switchToDutch }}">
+        NL
       </a>
       {% else %}
-      <a href="{{ ('/en' + page.url) | url }}" class="text-theme-muted hover:text-primary transition text-sm sm:text-base" aria-label="{{ t.switchToEnglish }}">
-        🇬🇧 EN
+      <a href="{{ ('/en' + page.url) | url }}" class="text-theme-muted hover:text-primary transition text-sm sm:text-base font-medium" aria-label="{{ t.switchToEnglish }}">
+        EN
       </a>
       {% endif %}
       <!-- Donate button -->
