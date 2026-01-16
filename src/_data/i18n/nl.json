@@ -1,0 +1,144 @@
+{
+  "site": {
+    "title": "Asia's Gift of Hope",
+    "tagline": "Hoop en menselijkheid voor Syrië",
+    "description": "Stichting voor humanitaire hulp in Syrië - Hoop en menselijkheid voor kwetsbare gezinnen"
+  },
+  "nav": {
+    "home": "Home",
+    "donate": "Doneer",
+    "language": "Taal",
+    "switchToEnglish": "English",
+    "switchToDutch": "Nederlands"
+  },
+  "footer": {
+    "navigation": "Navigatie",
+    "contact": "Contact",
+    "copyright": "Alle rechten voorbehouden",
+    "mission": "Een stichting opgericht ter nagedachtenis aan Asia, met als missie hoop en menselijkheid te brengen aan kwetsbare gezinnen in Syrië."
+  },
+  "home": {
+    "title": "Asia's Gift of Hope - Hoop en menselijkheid voor Syrië",
+    "description": "Stichting Asia's Gift of Hope biedt hoop aan kwetsbare gezinnen in Syrië door medische hulp, voedsel en onderwijs.",
+    "hero": {
+      "title": "Asia's Gift of Hope",
+      "tagline": "Hoop en menselijkheid voor Syrië",
+      "cta": "Doneer Nu",
+      "videoAlt": "Situatie in Syrië",
+      "videoTitle": "Video over het werk van Asia's Gift of Hope in Syrië"
+    },
+    "about": {
+      "title": "Over de Stichting",
+      "intro": "<strong>Asia's Gift of Hope</strong> is een stichting opgericht door Alaa Alamirat, geneeskundestudente aan het Erasmus MC. De stichting is vernoemd naar zijn moeder Asia, een vrouw met een gouden hart die als vrijwilliger tolkte bij Vluchtelingenwerk en altijd klaarstond voor anderen.",
+      "mission": "Onze missie is het bieden van hoop en menselijkheid aan kwetsbare gezinnen in Syrië door middel van medische hulp, voedsel, en onderwijs.",
+      "imageAlt": "Alaa met kinderen in Syrië"
+    },
+    "prosthetics": {
+      "title": "Prothese Hulp",
+      "intro": "Een prothese herstelt niet alleen iemands waardigheid, maar zorgt ervoor dat mensen weer kunnen werken en studeren.",
+      "jana": {
+        "name": "Jana",
+        "description": "Kan nu weer zelfstandig eten en spelen dankzij haar handprothese.",
+        "imageAlt": "Jana met haar nieuwe handprothese"
+      },
+      "bikri": {
+        "name": "Bikri",
+        "description": "Verloor beide benen maar kan nu weer lopen met nieuwe protheses.",
+        "imageAlt": "Bikri met zijn nieuwe beenprotheses"
+      },
+      "zakaria": {
+        "name": "Zakaria",
+        "description": "Student die dankzij zijn prothese weer naar school kan.",
+        "imageAlt": "Zakaria student met beenprothese"
+      },
+      "impact": "Al meer dan 14 patiënten geholpen met protheses"
+    },
+    "babyFood": {
+      "title": "Babyvoeding & Luiers",
+      "text1": "Veel gezinnen in Syrië kunnen geen babyvoeding of luiers betalen. Wij helpen deze gezinnen door essentiële babyproducten te verstrekken.",
+      "text2": "Een baby die wij hielpen was ernstig ondervoed. Na twee maanden voedingshulp was het kindje weer gezond en blij.",
+      "imageAlt": "Baby gezond na voedingshulp"
+    },
+    "foodPackages": {
+      "title": "Voedselpakketten",
+      "text1": "Wij kopen brood van straatverkopers - zo slaan we twee vliegen in één klap: we helpen de verkoper én de gezinnen die het brood ontvangen.",
+      "text2": "Onze voedselpakketten bevatten basis levensbehoeften voor gezinnen die het moeilijk hebben.",
+      "imageAlt": "Brood kopen van straatverkoper"
+    },
+    "education": {
+      "title": "Onderwijs Ondersteuning",
+      "text1": "Onderwijs is de sleutel tot een betere toekomst. Wij helpen studenten met schoolspullen en laptops.",
+      "text2": "Mustafa, een gemotiveerde student, ontving een laptop waarmee hij nu zijn studie kan voortzetten en zijn dromen kan najagen.",
+      "imageAlt": "Laptop voor student Mustafa"
+    },
+    "aboutAsia": {
+      "title": "Over Asia",
+      "text1": "De stichting is vernoemd naar Asia, de moeder van oprichter Alaa. Asia was een vrouw met een gouden hart die altijd klaarstond voor anderen.",
+      "text2": "Als vrijwilliger tolkte zij bij Vluchtelingenwerk en hielp zij talloze mensen. Haar nagedachtenis leeft voort in het werk van deze stichting.",
+      "quote": "Achter de tranen van verdriet schuilt de glimlach der herinnering",
+      "imageAlt": "Portret van Asia"
+    },
+    "cta": {
+      "title": "Help ons hoop brengen",
+      "text": "Met uw donatie kunnen wij meer mensen helpen met protheses, voedsel, en onderwijs. Elke bijdrage maakt een verschil.",
+      "button": "Doneer Nu",
+      "qrAlt": "QR-code voor donatie",
+      "qrText": "Scan om te doneren"
+    }
+  },
+  "donate": {
+    "title": "Doneer - Asia's Gift of Hope",
+    "description": "Steun Asia's Gift of Hope met een donatie en help kwetsbare gezinnen in Syrië met medische hulp, voedsel en onderwijs.",
+    "header": {
+      "title": "Doneer",
+      "subtitle": "Uw bijdrage maakt het verschil voor kwetsbare gezinnen in Syrië"
+    },
+    "whereItGoes": {
+      "title": "Waar gaat uw donatie naartoe?",
+      "prosthetics": {
+        "title": "Protheses",
+        "description": "Geef iemand de mogelijkheid om weer te lopen, werken en studeren."
+      },
+      "babyFood": {
+        "title": "Babyvoeding & Luiers",
+        "description": "Help baby's gezond opgroeien met essentiële voeding."
+      },
+      "foodPackages": {
+        "title": "Voedselpakketten",
+        "description": "Voorzie gezinnen van basis levensbehoeften."
+      },
+      "education": {
+        "title": "Onderwijs",
+        "description": "Geef kinderen toegang tot schoolspullen en laptops."
+      },
+      "housing": {
+        "title": "Woningverbetering",
+        "description": "Help gezinnen met noodreparaties aan hun woning."
+      }
+    },
+    "form": {
+      "title": "Doneren",
+      "comingSoon": "Donaties binnenkort mogelijk",
+      "comingSoonText": "We werken aan een veilige betaalmethode. Neem contact op voor meer informatie.",
+      "qrAlt": "QR-code voor donatie",
+      "qrText": "Scan de QR-code om te doneren",
+      "contactTitle": "Contact voor donaties",
+      "email": "E-mail:"
+    },
+    "impact": {
+      "title": "Onze Impact",
+      "prosthetics": "Protheses verstrekt",
+      "families": "Gezinnen geholpen",
+      "foodPackages": "Voedselpakketten",
+      "students": "Studenten ondersteund"
+    },
+    "transparency": {
+      "title": "Transparantie",
+      "text": "Bij Asia's Gift of Hope geloven we in volledige transparantie. Elke donatie wordt zorgvuldig besteed aan hulp voor mensen in nood in Syrië. We delen regelmatig updates over onze projecten en de impact van uw bijdragen.",
+      "image1Alt": "Voedselpakketten samenstellen",
+      "image1Text": "Vrijwilligers stellen voedselpakketten samen",
+      "image2Alt": "Schooltassen voor kinderen",
+      "image2Text": "Schoolspullen klaar voor distributie"
+    }
+  }
+}
