@@ -1,6 +1,7 @@
+{% set t = i18n[lang].nav %}
 <header class="bg-white shadow-sm sticky top-0 z-50">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
-    <a href="{{ '/' | url }}" class="flex items-center gap-2 sm:gap-3 hover:opacity-90 transition">
+    <a href="{% if lang == 'en' %}{{ '/en/' | url }}{% else %}{{ '/' | url }}{% endif %}" class="flex items-center gap-2 sm:gap-3 hover:opacity-90 transition">
       <!-- Lotus Logo SVG -->
       <svg class="w-9 h-9 sm:w-10 sm:h-10" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Asia's Gift of Hope logo">
         <path d="M50 10 C50 10, 35 35, 35 55 C35 70, 42 80, 50 85 C58 80, 65 70, 65 55 C65 35, 50 10, 50 10Z" fill="#006D5B"/>
@@ -13,7 +14,19 @@
       </svg>
       <span class="hidden sm:inline text-xl font-bold text-primary">Asia's Gift of Hope</span>
     </a>
-    <!-- Mobile & Desktop: Donate button -->
-    <a href="{{ '/doneer/' | url }}" class="btn text-white px-4 py-2 sm:px-5 rounded-lg font-semibold text-sm sm:text-base">Doneer</a>
+    <div class="flex items-center gap-2 sm:gap-4">
+      <!-- Language Switcher -->
+      {% if lang == 'en' %}
+      <a href="{{ page.url | replace('/en/', '/') | url }}" class="text-theme-muted hover:text-primary transition text-sm sm:text-base font-medium" aria-label="{{ t.switchToDutch }}">
+        NL
+      </a>
+      {% else %}
+      <a href="{{ ('/en' + page.url) | url }}" class="text-theme-muted hover:text-primary transition text-sm sm:text-base font-medium" aria-label="{{ t.switchToEnglish }}">
+        EN
+      </a>
+      {% endif %}
+      <!-- Donate button -->
+      <a href="{% if lang == 'en' %}{{ '/en/donate/' | url }}{% else %}{{ '/doneer/' | url }}{% endif %}" class="btn text-white px-4 py-2 sm:px-5 rounded-lg font-semibold text-sm sm:text-base">{{ t.donate }}</a>
+    </div>
   </div>
 </header>

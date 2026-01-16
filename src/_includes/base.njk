@@ -1,27 +1,40 @@
+{% set pageTitle = title or i18n[lang].home.title or i18n[lang].donate.title %}
+{% set pageDesc = description or i18n[lang].home.description or i18n[lang].donate.description %}
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="{{ lang or 'nl' }}">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#006D5B">
     <meta name="color-scheme" content="light">
-    <title>{{ title }}</title>
-    <meta name="description" content="{{ description }}">
+    <title>{{ pageTitle }}</title>
+    <meta name="description" content="{{ pageDesc }}">
     <link rel="canonical" href="{{ metadata.url }}{{ page.url }}">
+
+    <!-- Alternate language links -->
+    {% if lang == 'nl' %}
+    <link rel="alternate" hreflang="en" href="{{ metadata.url }}/en{{ page.url }}">
+    <link rel="alternate" hreflang="nl" href="{{ metadata.url }}{{ page.url }}">
+    <link rel="alternate" hreflang="x-default" href="{{ metadata.url }}{{ page.url }}">
+    {% else %}
+    <link rel="alternate" hreflang="nl" href="{{ metadata.url }}{{ page.url | replace('/en/', '/') }}">
+    <link rel="alternate" hreflang="en" href="{{ metadata.url }}{{ page.url }}">
+    <link rel="alternate" hreflang="x-default" href="{{ metadata.url }}{{ page.url | replace('/en/', '/') }}">
+    {% endif %}
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
-    <meta property="og:title" content="{{ title }}">
-    <meta property="og:description" content="{{ description or metadata.description }}">
+    <meta property="og:title" content="{{ pageTitle }}">
+    <meta property="og:description" content="{{ pageDesc }}">
     <meta property="og:image" content="{{ metadata.url }}/images/alaa-met-groep-kinderen-syrie.png">
-    <meta property="og:locale" content="nl_NL">
+    <meta property="og:locale" content="{{ locale or 'nl_NL' }}">
     <meta property="og:site_name" content="{{ metadata.title }}">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ title }}">
-    <meta name="twitter:description" content="{{ description or metadata.description }}">
+    <meta name="twitter:title" content="{{ pageTitle }}">
+    <meta name="twitter:description" content="{{ pageDesc }}">
     <meta name="twitter:image" content="{{ metadata.url }}/images/alaa-met-groep-kinderen-syrie.png">
 
     <!-- JSON-LD Structured Data -->
@@ -38,7 +51,7 @@
         "@type": "Country",
         "name": "Syria"
       },
-      "knowsLanguage": "nl",
+      "knowsLanguage": ["nl", "en"],
       "email": "info@asiasgiftofhope.nl"
     }
     </script>
@@ -62,7 +75,7 @@
   <body>
     <!-- Skip to main content link for keyboard users -->
     <a href="#main-content" class="skip-link">
-      Ga naar hoofdinhoud
+      {% if lang == 'en' %}Skip to main content{% else %}Ga naar hoofdinhoud{% endif %}
     </a>
 
     <!-- Header -->

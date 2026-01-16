@@ -1,0 +1,144 @@
+{
+  "site": {
+    "title": "Asia's Gift of Hope",
+    "tagline": "Hope and Humanity for Syria",
+    "description": "Foundation for humanitarian aid in Syria - Hope and humanity for vulnerable families"
+  },
+  "nav": {
+    "home": "Home",
+    "donate": "Donate",
+    "language": "Language",
+    "switchToEnglish": "English",
+    "switchToDutch": "Nederlands"
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "copyright": "All rights reserved",
+    "mission": "A foundation established in memory of Asia, with a mission to bring hope and humanity to vulnerable families in Syria."
+  },
+  "home": {
+    "title": "Asia's Gift of Hope - Hope and Humanity for Syria",
+    "description": "Asia's Gift of Hope Foundation provides hope to vulnerable families in Syria through medical aid, food and education.",
+    "hero": {
+      "title": "Asia's Gift of Hope",
+      "tagline": "Hope and Humanity for Syria",
+      "cta": "Donate Now",
+      "videoAlt": "Situation in Syria",
+      "videoTitle": "Video about Asia's Gift of Hope's work in Syria"
+    },
+    "about": {
+      "title": "About the Foundation",
+      "intro": "<strong>Asia's Gift of Hope</strong> is a foundation established by Alaa Alamirat, a medical student at Erasmus MC. The foundation is named after his mother Asia, a woman with a heart of gold who volunteered as an interpreter at Refugee Services and always stood ready to help others.",
+      "mission": "Our mission is to provide hope and humanity to vulnerable families in Syria through medical aid, food, and education.",
+      "imageAlt": "Alaa with children in Syria"
+    },
+    "prosthetics": {
+      "title": "Prosthetic Aid",
+      "intro": "A prosthetic not only restores someone's dignity, but enables people to work and study again.",
+      "jana": {
+        "name": "Jana",
+        "description": "Can now eat and play independently thanks to her hand prosthetic.",
+        "imageAlt": "Jana with her new hand prosthetic"
+      },
+      "bikri": {
+        "name": "Bikri",
+        "description": "Lost both legs but can now walk again with new prosthetics.",
+        "imageAlt": "Bikri with his new leg prosthetics"
+      },
+      "zakaria": {
+        "name": "Zakaria",
+        "description": "Student who can attend school again thanks to his prosthetic.",
+        "imageAlt": "Zakaria student with leg prosthetic"
+      },
+      "impact": "More than 14 patients helped with prosthetics"
+    },
+    "babyFood": {
+      "title": "Baby Food & Diapers",
+      "text1": "Many families in Syria cannot afford baby food or diapers. We help these families by providing essential baby products.",
+      "text2": "A baby we helped was severely malnourished. After two months of nutritional support, the child was healthy and happy again.",
+      "imageAlt": "Baby healthy after nutritional support"
+    },
+    "foodPackages": {
+      "title": "Food Packages",
+      "text1": "We buy bread from street vendors - this way we kill two birds with one stone: we help the vendor and the families who receive the bread.",
+      "text2": "Our food packages contain basic necessities for families who are struggling.",
+      "imageAlt": "Buying bread from street vendor"
+    },
+    "education": {
+      "title": "Education Support",
+      "text1": "Education is the key to a better future. We help students with school supplies and laptops.",
+      "text2": "Mustafa, a motivated student, received a laptop that enables him to continue his studies and pursue his dreams.",
+      "imageAlt": "Laptop for student Mustafa"
+    },
+    "aboutAsia": {
+      "title": "About Asia",
+      "text1": "The foundation is named after Asia, the mother of founder Alaa. Asia was a woman with a heart of gold who always stood ready to help others.",
+      "text2": "As a volunteer, she interpreted at Refugee Services and helped countless people. Her memory lives on in the work of this foundation.",
+      "quote": "Behind the tears of sorrow hides the smile of remembrance",
+      "imageAlt": "Portrait of Asia"
+    },
+    "cta": {
+      "title": "Help us bring hope",
+      "text": "With your donation, we can help more people with prosthetics, food, and education. Every contribution makes a difference.",
+      "button": "Donate Now",
+      "qrAlt": "QR code for donation",
+      "qrText": "Scan to donate"
+    }
+  },
+  "donate": {
+    "title": "Donate - Asia's Gift of Hope",
+    "description": "Support Asia's Gift of Hope with a donation and help vulnerable families in Syria with medical aid, food and education.",
+    "header": {
+      "title": "Donate",
+      "subtitle": "Your contribution makes a difference for vulnerable families in Syria"
+    },
+    "whereItGoes": {
+      "title": "Where does your donation go?",
+      "prosthetics": {
+        "title": "Prosthetics",
+        "description": "Give someone the ability to walk, work and study again."
+      },
+      "babyFood": {
+        "title": "Baby Food & Diapers",
+        "description": "Help babies grow up healthy with essential nutrition."
+      },
+      "foodPackages": {
+        "title": "Food Packages",
+        "description": "Provide families with basic necessities."
+      },
+      "education": {
+        "title": "Education",
+        "description": "Give children access to school supplies and laptops."
+      },
+      "housing": {
+        "title": "Home Improvement",
+        "description": "Help families with emergency repairs to their homes."
+      }
+    },
+    "form": {
+      "title": "Donate",
+      "comingSoon": "Donations coming soon",
+      "comingSoonText": "We are working on a secure payment method. Contact us for more information.",
+      "qrAlt": "QR code for donation",
+      "qrText": "Scan the QR code to donate",
+      "contactTitle": "Contact for donations",
+      "email": "Email:"
+    },
+    "impact": {
+      "title": "Our Impact",
+      "prosthetics": "Prosthetics provided",
+      "families": "Families helped",
+      "foodPackages": "Food packages",
+      "students": "Students supported"
+    },
+    "transparency": {
+      "title": "Transparency",
+      "text": "At Asia's Gift of Hope, we believe in complete transparency. Every donation is carefully spent on aid for people in need in Syria. We regularly share updates about our projects and the impact of your contributions.",
+      "image1Alt": "Assembling food packages",
+      "image1Text": "Volunteers assembling food packages",
+      "image2Alt": "School bags for children",
+      "image2Text": "School supplies ready for distribution"
+    }
+  }
+}

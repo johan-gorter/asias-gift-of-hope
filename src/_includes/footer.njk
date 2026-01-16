@@ -1,3 +1,5 @@
+{% set t = i18n[lang].footer %}
+{% set nav = i18n[lang].nav %}
 <footer class="bg-theme-dark text-white py-12 px-6">
   <div class="max-w-6xl mx-auto">
     <div class="grid md:grid-cols-3 gap-8">
@@ -13,18 +15,18 @@
           <h3 class="text-lg font-semibold text-secondary">Asia's Gift of Hope</h3>
         </div>
         <p class="text-theme-light leading-relaxed">
-          Een stichting opgericht ter nagedachtenis aan Asia, met als missie hoop en menselijkheid te brengen aan kwetsbare gezinnen in Syrië.
+          {{ t.mission }}
         </p>
       </div>
       <div>
-        <h3 class="text-lg font-semibold mb-4 text-secondary">Navigatie</h3>
+        <h3 class="text-lg font-semibold mb-4 text-secondary">{{ t.navigation }}</h3>
         <ul class="space-y-2">
-          <li><a href="{{ '/' | url }}" class="text-theme-light hover:text-primary-light transition">Home</a></li>
-          <li><a href="{{ '/doneer/' | url }}" class="text-theme-light hover:text-primary-light transition">Doneer</a></li>
+          <li><a href="{% if lang == 'en' %}{{ '/en/' | url }}{% else %}{{ '/' | url }}{% endif %}" class="text-theme-light hover:text-primary-light transition">{{ nav.home }}</a></li>
+          <li><a href="{% if lang == 'en' %}{{ '/en/donate/' | url }}{% else %}{{ '/doneer/' | url }}{% endif %}" class="text-theme-light hover:text-primary-light transition">{{ nav.donate }}</a></li>
         </ul>
       </div>
       <div>
-        <h3 class="text-lg font-semibold mb-4 text-secondary">Contact</h3>
+        <h3 class="text-lg font-semibold mb-4 text-secondary">{{ t.contact }}</h3>
         <ul class="space-y-2 text-theme-light">
           <li>
             <a href="mailto:info@asiasgiftofhope.nl" class="hover:text-primary-light transition">
@@ -35,7 +37,7 @@
       </div>
     </div>
     <div class="mt-8 pt-8 border-t border-gray-700 text-center text-theme-light">
-      <p>&copy; 2025 Asia's Gift of Hope. Alle rechten voorbehouden.</p>
+      <p>&copy; 2025 Asia's Gift of Hope. {{ t.copyright }}.</p>
     </div>
   </div>
 </footer>
