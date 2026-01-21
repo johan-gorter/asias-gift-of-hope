@@ -156,14 +156,15 @@ No automated tests. Verify changes visually using **screenshots**:
      --window-size=1568,1568 \
      http://localhost:8080/
 
-   # Mobile (375x667)
+   # Mobile (412x915)
    chromium --headless --disable-gpu --no-sandbox \
      --screenshot=screenshots/mobile.png \
-     --window-size=375,667 \
+     --window-size=412,915 \
      http://localhost:8080/
    ```
    NOTE: Do maximum height 1568, because otherwise AI agents will scale images down before viewing.
 5. For long pages, add `<a name="section-name"></a>` anchors to scroll to specific sections (navigate to `http://localhost:8080/#section-name`)
-6. Review screenshots for visual imperfections and correct them
-7. Commit screenshots to the working branch and push
-8. Display screenshots to the user using raw GitHub links
+6. Review screenshots for visual imperfections and correct them, then start over from step 2 if needed
+7. Commit screenshots to the working branch in a separate commit and push
+8. Display screenshots to the user using raw GitHub links like:
+   [desktop homepage](https://raw.githubusercontent.com/johan-gorter/asias-gift-of-hope/7fc8a3b/screenshots/desktop-home.png)
